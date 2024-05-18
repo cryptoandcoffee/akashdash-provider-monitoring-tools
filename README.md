@@ -1,9 +1,9 @@
 
-# akashdash-provider-monitoring-tools
+# akash-provider-monitoring-tools
 
 ## Overview
 
-`akashdash-provider-monitoring-tools` is a suite of tools designed to monitor and maintain Akash provider clusters. It includes utilities for cleaning up the cluster, switching RPC endpoints, and monitoring deployments.
+`akash-provider-monitoring-tools` is a suite of tools designed to monitor and maintain Akash provider clusters. It includes utilities for cleaning up the cluster, switching RPC endpoints, and monitoring deployments.
 
 ## Table of Contents
 
@@ -23,13 +23,13 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Installation
 
-Follow these steps to set up and install `akashdash-provider-monitoring-tools`.
+Follow these steps to set up and install `akash-provider-monitoring-tools`.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/cryptoandcoffee/akashdash-provider-monitoring-tools.git
-cd akashdash-provider-monitoring-tools
+git clone https://github.com/cryptoandcoffee/akash-provider-monitoring-tools.git
+cd akash-provider-monitoring-tools
 ```
 
 ### 2. Build and Push Docker Images
@@ -101,4 +101,4 @@ For more details, refer to the individual Python scripts and Dockerfiles in the 
 
 ---
 
-Feel free to contribute to this project by opening issues or submitting pull requests on the [GitHub repository](https://github.com/cryptoandcoffee/akashdash-provider-monitoring-tools).
+Feel free to contribute to this project by opening issues or submitting pull requests on the [GitHub repository](https://github.com/cryptoandcoffee/akash-provider-monitoring-tools).
