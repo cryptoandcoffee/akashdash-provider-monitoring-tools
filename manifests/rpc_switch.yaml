@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rpc-switch
+  namespace: akash-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rpc-switch
+  template:
+    metadata:
+      labels:
+        app: rpc-switch
+    spec:
+      serviceAccountName: monitoring-sa
+      containers:
+      - name: rpc-switch
+        image: cryptoandcoffee/akash-provider-monitor-rpc-switch:latest
+        imagePullPolicy: Always
+        env:
+        - name: RPC_ENDPOINT
+          value: "http://rpc.sfo.computer:26657"

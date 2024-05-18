@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-cleaner
+  namespace: akash-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: house-cleaner
+  template:
+    metadata:
+      labels:
+        app: house-cleaner
+    spec:
+      serviceAccountName: monitoring-sa
+      containers:
+      - name: house-cleaner
+        imagePullPolicy: Always
+        image: cryptoandcoffee/akash-house-cleaner:latest

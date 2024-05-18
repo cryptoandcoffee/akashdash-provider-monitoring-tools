@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chaperone
+  namespace: akash-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chaperone
+  template:
+    metadata:
+      labels:
+        app: chaperone
+    spec:
+      serviceAccountName: monitoring-sa
+      containers:
+      - name: chaperone
+        imagePullPolicy: Always
+        image: cryptoandcoffee/akash-provider-chaperone:latest
+        env:
+        - name: DISCORD_WEBHOOK_URL
+          value: "your-discord-webhook-url"
+        - name: PUSHOVER_API_TOKEN
+          value: "your-pushover-api-token"
+        - name: PUSHOVER_USER_KEY
+          value: "your-pushover-user-key"
+
+
+
